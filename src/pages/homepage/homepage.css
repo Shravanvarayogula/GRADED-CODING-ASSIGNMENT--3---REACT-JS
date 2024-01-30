@@ -1,0 +1,62 @@
+.logo_card {
+  border: 1px solid black;
+  padding: 0px;
+}
+.devider_font {
+  color: #a0a09f !important;
+}
+.cursor_pointer {
+  cursor: pointer;
+}
+body {
+  background: #141414;
+  color: #ffffff;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  /* background: rgba(0, 0, 0, 0.8); */
+  width: 200px;
+  transition: 0.5s ease;
+  /* opacity: 0; */
+  /* bottom: 0; */
+  /* color: black; */
+  font-size: 20px;
+  /* padding: 20px; */
+  text-align: center;
+}
+.f-20{
+  font-size: 30px !important;
+}
+.ant-notification-notice-with-icon .ant-notification-notice-description {
+  overflow-y: auto;
+  max-height: 500px;
+  white-space: pre-wrap;
+}
+.mr-2{
+  margin-right: 5px;
+}
+.ant-menu-horizontal{
+  border-bottom: none !important;
+}
