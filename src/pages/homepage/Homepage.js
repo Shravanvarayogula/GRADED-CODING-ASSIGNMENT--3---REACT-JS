@@ -3,8 +3,8 @@ import { Row, Col, Menu } from "antd";
 import "./homepage.css";
 import MovieList from "../../components/MovieList";
 import MovieListHeading from "../../components/MovieListHeading";
-import AddFavourites from "../../components/AddToFavourites";
-import RemoveFavourites from "../../components/RemoveFromFavourites";
+import AddToFavourites from "../../components/AddToFavourites";
+import RemoveFromFavourites from "../../components/RemoveFromFavourites";
 import Search from "antd/lib/input/Search";
 import { openNotification } from "../../components/OpenNotification";
 import {
@@ -77,7 +77,7 @@ const Homepage = () => {
 
       setFavourites(newFavouriteList);
     } else {
-      openNotification("Already added in favourite", "error");
+      openNotification("Already in your favourites", "info");
     }
   };
 
@@ -151,7 +151,7 @@ const Homepage = () => {
           current === "favourite" ? removeFavouriteMovie : addFavouriteMovie
         }
         favouriteComponent={
-          current === "favourite" ? RemoveFavourites : AddFavourites
+          current === "favourite" ? RemoveFromFavourites : AddToFavourites
         }
       />
 
@@ -166,6 +166,8 @@ const Homepage = () => {
         handleFavouritesClick={removeFavouriteMovie}
         favouriteComponent={RemoveFavourites}
       /> */}
+
+      
     </>
   );
 };

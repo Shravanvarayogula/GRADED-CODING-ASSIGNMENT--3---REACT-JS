@@ -21,7 +21,7 @@ const MovieList = (props) => {
         </Row>
       ) : (
         <Row>
-          {// eslint-disable-next-line
+          {
           props.movies.length == 0 ? (
             <Row justify="center" align="middle" className="vh-100 vw-100 text-center">
               <Col span={24}><h5>No data found</h5></Col>
@@ -43,7 +43,6 @@ const MovieList = (props) => {
                   onClick={() => handleClick(movie)}
                 />
               }
-              // onClick={() => handleClick(movie)}
             >
               <Meta
                 title={movie.title}
