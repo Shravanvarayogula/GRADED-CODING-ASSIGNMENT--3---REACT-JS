@@ -71,13 +71,13 @@ const Homepage = () => {
       const newFavouriteList = [...favourites, movie];
       await addToFavMovie(movie)
         .then((res) => {
-          openNotification("Succeffully added to favourite", "success");
+          openNotification(`"Added ${movie.title} - (${movie.year}) to your favourites"`, "success");
         })
         .catch((err) => {});
 
       setFavourites(newFavouriteList);
     } else {
-      openNotification("Already in your favourites", "info");
+      openNotification(`"${movie.title} - (${movie.year}) is already in your favourites"`, "info");
     }
   };
 
@@ -89,7 +89,7 @@ const Homepage = () => {
     setLoading(true);
     await removeFromFavourite(id)
       .then((res) => {
-        openNotification("Succeffully removed from favourite", "success");
+        openNotification(`"Removed ${movie.title} - (${movie.year}) from your favourites"`, "success");
         setLoading(false);
         getFavMovies();
       })
