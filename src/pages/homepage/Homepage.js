@@ -153,21 +153,7 @@ const Homepage = () => {
         favouriteComponent={
           current === "favourite" ? RemoveFromFavourites : AddToFavourites
         }
-      />
-
-      {/* <Row>
-        <MovieListHeading heading="Favourites" />
-      </Row>
-
-      <MovieList
-        loading={loading}
-        current={current}
-        movies={favourites}
-        handleFavouritesClick={removeFavouriteMovie}
-        favouriteComponent={RemoveFavourites}
-      /> */}
-
-      
+      />      
     </>
   );
 };
